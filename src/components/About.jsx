@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const visionMissionData = {
   vision: "Menjadi lembaga pendidikan Islam terdepan yang menghasilkan generasi qur'ani, cerdas, berakhlak mulia, dan bermanfaat bagi umat.",
@@ -14,8 +14,8 @@ const visionMissionData = {
 const About = () => {
   return (
     // 1. SECTION UTAMA: Wadah untuk background image
-    <section 
-      id="about" 
+    <section
+      id="about"
       className="relative py-20 bg-cover bg-center" // Class untuk background
       style={{ backgroundImage: "url('/foto2.jpg')" }} // Path gambar Anda
     >
@@ -26,7 +26,7 @@ const About = () => {
       <div className="relative container mx-auto px-6 md:px-10 lg:px-14">
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          
+
           {/* 4. KOLOM KIRI (sudah bersih dari background) */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -46,7 +46,7 @@ const About = () => {
           </motion.div>
 
           {/* KOLOM KANAN: Visi dan Misi */}
-          <motion.div 
+          <motion.div
             className="flex flex-col gap-8"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -62,7 +62,7 @@ const About = () => {
                 {visionMissionData.vision}
               </p>
             </div>
-            
+
             {/* Box Misi */}
             <div className="bg-[#004030] p-8 rounded-lg shadow-lg">
               <h3 className="text-2xl font-semibold text-[#f4f0e4] mb-3">

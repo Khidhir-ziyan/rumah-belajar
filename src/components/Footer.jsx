@@ -1,9 +1,8 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { FaWhatsapp, FaInstagram, FaMapMarkerAlt } from 'react-icons/fa';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Footer = () => {
-  // Handler untuk form, sementara hanya mencegah reload halaman
   const handleSubmit = (e) => {
     e.preventDefault();
     alert('Fitur pengiriman pesan belum diaktifkan.');
@@ -12,10 +11,10 @@ const Footer = () => {
   return (
     <footer id="kontak" className="bg-[#004030] text-gray-200">
       <div className="container mx-auto px-6 md:px-10 lg:px-14 pt-16 pb-8">
-        
+
         {/* Konten Utama Footer */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-8">
-          
+
           {/* Kolom Kiri: Info Alamat & Sosial Media */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -35,39 +34,39 @@ const Footer = () => {
               Depok
             </p>
             <div className="flex space-x-4 mt-6">
-  {/* Link WhatsApp */}
-  <a 
-    href="https://wa.me/6281234567890" 
-    aria-label="WhatsApp" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="text-white/80 hover:text-white transition-colors"
-  >
-    <FaWhatsapp size={24} />
-  </a>
+              {/* Link WhatsApp */}
+              <a
+                href="https://wa.me/6281234567890"
+                aria-label="WhatsApp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/80 hover:text-white transition-colors"
+              >
+                <FaWhatsapp size={24} />
+              </a>
 
-  {/* Link Instagram */}
-  <a 
-    href="https://instagram.com/rumahbelajar" 
-    aria-label="Instagram" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="text-white/80 hover:text-white transition-colors"
-  >
-    <FaInstagram size={24} />
-  </a>
+              {/* Link Instagram */}
+              <a
+                href="https://instagram.com/rumahbelajar"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/80 hover:text-white transition-colors"
+              >
+                <FaInstagram size={24} />
+              </a>
 
-  {/* Link Lokasi Peta */}
-  <a 
-    href="https://maps.app.goo.gl/uRDC21XKSRLRnHbV9" 
-    aria-label="Lokasi Peta" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="text-white/80 hover:text-white transition-colors"
-  >
-    <FaMapMarkerAlt size={24} />
-  </a>
-</div>
+              {/* Link Lokasi Peta */}
+              <a
+                href="https://maps.app.goo.gl/uRDC21XKSRLRnHbV9"
+                aria-label="Lokasi Peta"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/80 hover:text-white transition-colors"
+              >
+                <FaMapMarkerAlt size={24} />
+              </a>
+            </div>
           </motion.div>
 
           {/* Kolom Kanan: Form Kontak */}

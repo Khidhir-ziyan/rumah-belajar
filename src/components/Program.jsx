@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 // Data untuk kartu program, agar mudah diubah dan ditambah
 const programData = [
@@ -53,7 +53,7 @@ const Program = () => {
 
       {/* Kontainer utama di atas overlay */}
       <div className="relative container mx-auto text-center px-6 md:px-10 lg:px-14">
-        
+
         {/* Judul dan Deskripsi Section */}
         <motion.div
           initial={{ opacity: 0, y: -30 }}

@@ -1,10 +1,10 @@
 import { ArrowDownToDot } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Hero = () => {
   return (
     <section
-    id='hero'
+      id='hero'
       className="relative h-screen bg-cover bg-center flex items-center justify-center text-[#f4f0e4]"
       style={{
         backgroundImage: `url('/foto1.jpg')`,
